@@ -1,114 +1,904 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+	<title>Nanotecna</title>
+	<script src="lib/intersection-observer/intersection-observer.js"></script>
+		<style>
+			@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+	    .fade-in {
+  width: auto;
+  height: auto;
+ 
+}
 
-  <head>
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-animation {
+    animation: wipe-enter 1s 1;
+  }
+}
+		body{
+		font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+		background-image:url('1123.jpg');
+		}
+		div#header{
+		width: 100%;
+		height: 90px;
+		background-color: #034694;
+		padding-top: 45px;
+		margin-bottom: 20px;
+		}
+		div#countdown{
+		width: 100%;
+		height: 350px;
+		background-image: url('');
+		margin-bottom: 60px;
+		padding-top: 150px;
+		/*https://thumbs.dreamstime.com/b/antecedentes-m%C3%A9dicos-cient%C3%ADficos-de-alta-calidad-en-nanotecnolog%C3%ADa-estructura-molecular-ilustraci%C3%B3n-d-la-celda-cristal-202144520.jpg*/
+		}
+		div#home{
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+		background-image: url('');
+		}
+		div#whitepaper{
+		width: 100%;
+		height: auto;
+			margin-bottom: 20px;
+			background-image: url('');
+			background-repeat: no-repeat;
+		/*<!--https://elysiumpost.com/wp-content/uploads/2020/12/nanotecnologia.png*/
+		}
+		div#tokenomics{
+		width: 100%;
+		height: auto;
+			margin-bottom: 20px;
+				background-image: url('');
+		}
+		div#audit{
+		width: 100%;
+		height: auto;
+			margin-bottom: 20px;
+				background-image: url('');
+		}
+		div#team{
+		width: 100%;
+		height: auto;
+		background-color:  rgb(3,70,148,0.70);
+		margin-bottom: 150px;
+		}
+		div#roadmap{
+		width: 100%;
+		height: auto;
+		margin-top: -100px;
+		background-color: rgb(3,70,148,0.70);
+		margin-bottom: 10px;
+		}
+		div#footer{
+		width: 100%;
+		height: 100px;
+		background-color: #034694;
+		text-align: center;
+		padding-top: 50px
+		}
+		.row-superior{
+					height: 500px;
+				    width: 100%;
+				    text-align: center;
+		}
+		.row-left{
+				    width: 60%;
+				    height: 500px;
+				    background-color:  rgb(3,70,148,0.70);
+				    text-align: center;
+		}
+		.row-right{
+					height: 450px;
+				    width: 40%;
+				    text-align: center;
+					margin-top: 25px;
+		}
+		.row-left-alt{
+				    height: 375px;
+				    width: 40%;
+				    background-color: rgb("");
+				    text-align: center;
+				    margin-top: 25px;		
+				    padding-top: 30px;
+			}
+		.row-right-alt{
+				    width: 60%;
+				    height: 500px;
+				    background-color: rgb(3,70,148,0.70);
+				    text-align: center;
+		}
+		.row-left-menu{
+		}
+		.row-right-menu{
+		}
+		.team{
+					width:19.8%;
+					height:325px;
+					background-color: rgb(128,128,128,0.90);
+					margin-left: 1.5px;
+					margin-top:	10px;
+		}
+		div.clock-right{
+							margin-top: 50px;
+							width: 80%;
+							height: 350px;
+							    background-color: rgb(3,70,148,0.70);
+							}
+		div.clock-left{
+						width: 20%;
+						height:350;
+						}
+		ul#menu li {
+						background-color: #034694;
+						margin-right: -10px;
+						float: left; /* elementi su singola riga */
+						list-decoration: none;
+					}
+		ul#menu li a{
+							color: #fff;
+							display: block;
+						    font-weight: bold;
+						    line-height: 30px;
+						    text-decoration: none;
+						    width: 138px;
+						    height: 30px;
+						    text-align: center;
+					}
+			ul#menu {
+			list-style: none;
+			}
+		div#menu0{
+		margin-left:20%;
+		}
+		h1{
+		color: white;
+		text-align: center;
+		}
+		h2{
+		color: #034694;
+		text-align: center;
+		}
+		p.line{
+		color: white;
+		font-size: 120px;
+		margin-top: -80px;
+		}
+		p.line-out{
+		color: white;
+		font-size: 120px;
+		margin-top: -80px;
+		text-align: center;
+		margin-bottom: -10px;
+		}
+		div#logo{
+		margin-left: 50px;
+		}
+		button{
+		width: 400px;
+		height: 40px;
+		background-color: white;
+		border-radius: 5px;
+		border: 0.5px solid #034694;
+		color: #034694;
+		box-shadow: 5px 5px 5px;
+		}
+		.contenuto{
+		text-align:center;
+		font-family:  "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+		font-size: 25px;
+		color: white;
+		margin-top: -100px;
+		margin-left: 20px;
+		margin-right: 20px;
+		}
+		.contenuto1{
+		text-align:center;
+		font-family:  "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+		font-size: 25px;
+		color: white;
+		margin-left: 20px;
+		margin-right: 20px;
+		}
+		#clockdiv{
+						font-family: sans-serif;
+						color: #fff;
+						display: inline-block;
+						font-weight: 100;
+						text-align: center;
+						font-size: 30px;
+					}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+					#clockdiv > div{
+						padding: 10px;
+						border-radius: 3px;
+						background: rgb(3 70 148);
+						display: inline-block;
+					}
 
-    <title>DigiMedia SEO Template 3 variations by TemplateMo</title>
+					#clockdiv div > span{
+						padding: 15px;
+						border-radius: 3px;
+						background: rgb(255,255,255,0.5);
+						display: inline-block;
+					}
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+					.smalltext{
+						padding-top: 5px;
+						font-size: 16px;
+					}
+					
+					.timeline {
+							  position: relative;
+							  width: 100%;
+							  max-width: 1140px;
+							  margin: 0 auto;
+							  padding: 15px 0;
+							}
 
+							.timeline::after {
+							  content: '';
+							  position: absolute;
+							  width: 5px;
+							  background: white;
+							  top: 0;
+							  bottom: 0;
+							  left: 50%;
+							  margin-left: -1px;
+							}
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v1.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-<!--
+							.container {
+							  padding: 15px 30px;
+							  position: relative;
+							  background: inherit;
+							  width: 50%;
+							}
 
-TemplateMo 568 DigiMedia
+							.container.left {
+							  left: 0;
+							}
 
-https://templatemo.com/tm-568-digimedia
+							.container.right {
+							  left: 50%;
+							}
 
--->
-  </head>
+							.container::after {
+							       content: '';
+							    position: absolute;
+							    width: 10px;
+							    height: 15px;
+							    top: calc(50% - 8px);
+							    right: -8px;
+							    background: #ffffff;
+							    border: 2px solid white;
+							    border-radius: 16px;
+							    z-index: 1;
+							}
 
-<body>
+							.container.right::after {
+							  left: -6px;
+							}
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+							.container::before {
+							     content: '';
+							    position: absolute;
+							    width: 50px;
+							    height: 5px;
+							    top: calc(50% - 1px);
+							    right: 6px;
+							    background: white;
+							    z-index: 1;
+							}
+
+							.container.right::before {
+							  left: 8px;
+							}
+
+							.container .date {
+							     position: absolute;
+							    display: inline-block;
+							    top: calc(50% - 8px);
+							    font-size: 25px;
+							    font-weight: bold;
+							    color: white;
+							    text-transform: uppercase;
+							    letter-spacing: 6px;
+							    z-index: 1;
+							}
+
+							.container.left .date {
+							     right: -150px;
+							}
+
+							.container.right .date {
+							     left: -150px;
+							}
+
+							.container .icon {
+							   position: absolute;
+							    display: inline-block;
+							    width: 20px;
+							    height: 40px;
+							    padding: 0px 0;
+							    top: calc(50% - 20px);
+							    background: #F6D155;
+							    border: 4px solid #034694;
+							    border-radius: 40px;
+							    text-align: center;
+							    font-size: 15px;
+							    color: white;
+							    z-index: 1;
+							}
+
+							.container.left .icon {
+							  right: 56px;
+							}
+
+							.container.right .icon {
+							  left: 56px;
+							}
+
+							.container .content {
+							  padding: 30px 90px 30px 30px;
+							  background: #F6D155;
+							  position: relative;
+							  border-radius: 0 500px 500px 0;
+							}
+
+							.container.right .content {
+							  padding: 30px 30px 30px 90px;
+							  border-radius: 500px 0 0 500px;
+							}
+
+							.container .content h2 {
+							  margin: 0 0 10px 0;
+							  font-size: 20px;
+							  font-weight: bold;
+							  color: #034694;
+							}
+
+							.container .content p {
+							  margin: 0;
+							  font-size: 16px;
+							  line-height: 22px;
+							  color: #000000;
+							}
+
+							@media (max-width: 767.98px) {
+							  .timeline::after {
+							    left: 90px;
+							  }
+
+							  .container {
+							    width: 100%;
+							    padding-left: 120px;
+							    padding-right: 30px;
+							  }
+
+							  .container.right {
+							    left: 0%;
+							  }
+
+							  .container.left::after, 
+							  .container.right::after {
+							    left: 82px;
+							  }
+
+							  .container.left::before,
+							  .container.right::before {
+							    left: 100px;
+							    border-color: transparent #006E51 transparent transparent;
+							  }
+
+							  .container.left .date,
+							  .container.right .date {
+							    right: auto;
+							    left: 15px;
+							  }
+
+							  .container.left .icon,
+							  .container.right .icon {
+							    right: auto;
+							    left: 146px;
+							  }
+
+							  .container.left .content,
+							  .container.right .content {
+							    padding: 30px 30px 30px 90px;
+							    border-radius: 500px 0 0 500px;
+							  }
+							}
+			h3{
+			align: center;
+			color:white;
+			}
+			div#social{
+			width: 100%;
+			height: auto;
+			background-color: rgb(0,0,0,0,80);
+				div#socials{
+				float:left;
+				}
+			}
+			div.row-superior.socials{
+			width: 100%;
+			heigth: 60px;
+			background-color = rgb(0,0,0,0.70)
+			}
+			ul#socials li{
+				list-decoration: none;
+				float: left;
+				margin-right: 20px;
+			}
+			div.row-left-socials{
+			width: 70%;
+			height: 75px;
+			background-color: rgb(0,0,0,0.70)
+			}
+			div.row-right-socials{
+			width: 30%;
+			height: 75px;
+			background-color: rgb(0,0,0,0.70)
+			}
+			img.icon{
+			width: 50px;
+			height: 50px;
+			}
+			ul#socials {
+			list-style: none;
+			}
+				}
+	@media screen and (max-width: 3841px) {
+			  .clock-right {
+			    height: 135em !important;
+			  }
+			 .contenuto1 {
+			            text-align: center;
+				    font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+				    font-size: 25px;
+				    color: white;
+				    margin-left: 20px;
+				    margin-right: 20px;
+			  }
+			}
+			@media screen and (max-width: 1921px) {
+			    .clock-right {
+			            height: 45em !important;
+				    width: 60em !important;
+				    margin-bottom: 5em;
+			    }
+			    .contenuto1 {
+			            text-align: center;
+				    font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+				    font-size: 46px;
+				    color: white;
+				    margin-left: 20px;
+				    margin-right: 20px;
+			  }
+				.contenuto {
+			 	    text-align: center;
+				    font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+				    font-size: 46px;
+				    color: white;
+				    margin-left: 20px;
+				    margin-right: 20px;
+				}
+				#clockdiv {
+				    font-family: sans-serif;
+				    color: #fff;
+				    display: inline-block;
+				    font-weight: 100;
+				    text-align: center;
+				    font-size: 100px;
+				}
+				.smalltext {
+				    padding-top: 5px;
+				    font-size: 34px;
+				}
+			#h1 {
+				    color: white;
+				    text-align: center;
+				    font-size: 60px;
+				}
+			.row-superior{
+				    height: 500px;
+				    width: 100%;
+				    text-align: center;
+				}
+			  }  
+			  @media screen and (max-width: 769px) {
+			    .clock-right {
+			      height: 25em !important;
+			    }
+			 .contenuto1 {
+			            text-align: center;
+				    font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+				    font-size: 25px;
+				    color: white;
+				    margin-left: 20px;
+				    margin-right: 20px;
+			  }
+			  }
+			  @media screen and (max-width: 400px) {
+			    .clock-right {
+			      height: 25em !important;
+			 .contenuto1 {
+			            text-align: center;
+				    font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+				    font-size: 25px;
+				    color: white;
+				    margin-left: 20px;
+				    margin-right: 20px;
+			  }
+			    }
+  }
+		</style>
+	</head>
+	<body>
+	<!--/* Start header -->
+		<div id="header">
+					<div id="logo" style="float:left;">
+						<img src="https://www.nanotecna.com/wp-content/uploads/2019/07/LOGO-NANOTECNA_Tavola-disegno-1-1568x473.png" style="width:200px; height:70px;"/>
+					</div>
+					<div id="menu0">
+						<ul id="menu">
+							<li><a href="#Home">Home</a></li>
+							<li><a href="#Whitepaper">WhitePaper</a></li>
+							<li><a href="#Tokenomics">Tokenomics</a></li>
+							<li><a href="#Audit">Audit</a></li>
+							<li><a href="#Team">Team</a></li>
+							<li><a href="#RoadMap">RoadMap</a></li>
+							<li><a href="#">Join To Presale</a></li>
+						</ul>
+					</div>
+		</div>
+	<!--*/end header-->
+	<!--*/start countdown-->
+	<div  id="countdown">
+		<div class="row-superior fade-in-animation">
+				<div class="clock-left" style="float:left;">
+					<img src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/14004.png" style="width:250px; height:407px;"/>
+				</div>
+				<div class="clock-right fade-in" style="float:left;">
+				<h1 id="h1">Countdown Clock:</h1>
+				<br>
+						<p class="contenuto1"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+				<br>	
+					<div id="clockdiv">
+					  <div>
+						<span class="days"></span>
+						<div class="smalltext">Days</div>
+					  </div>
+					  <div>
+						<span class="hours"></span>
+						<div class="smalltext">Hours</div>
+					  </div>
+					  <div>
+						<span class="minutes"></span>
+						<div class="smalltext">Minutes</div>
+					  </div>
+					  <div>
+						<span class="seconds"></span>
+						<div class="smalltext">Seconds</div>
+					  </div>
+					</div>
+					<script>
+					
+
+  function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+					</script>
+				</div>
+		</div>
+	</div>
+	<!--*/end countdown-->
+	<br>
+	<br>
+	<!--*/start home-->
+	<div id="home">
+		<div class="row-superior  fade-in-animation">
+			<div class="row-left fade-in" style="float:left;">
+			<h1>The project</h1>
+			<p class="line">---</p>
+			<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			<br>
+			<p class="contenuto1"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			<br>
+			<button><b> Telegram </b></button>
+			</div>
+			<div class="row-right " style="float:left;">
+			<img src="https://www.noachisterratoken.com/token/wp-content/uploads/2021/11/cropped-YAZISIZ-1-1.png" style="width: 396px; height:auto; margin-top: 48px;">
+				<div class="contentrow">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--*/end home-->
+	<br>
+	<br>
+	<!--*/start whitepaper-->
+	<div id="whitepaper">
+		<div class="row-superior fade-in-animation">
+			<div class="row-left-alt" style="float:left;">
+			<img src="unnamed-removebg-preview.png" style="width:250px; heigth:290px; margin-bottom: 150px;"/>
+			<p class="contenuto"> A document released by a crypto project that gives investors technical information about its concept</p>
+			</div>
+			<div class="row-right-alt fade-in" style="float:left;">
+			<h1>Whitepaper</h1>
+			<p class="line">---</p>
+			<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			<br>
+			<p class="contenuto1"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			<br>
+			<button>White Paper</button>
+			</div>
+		</div>
+	</div>
+	<!--*/end whitepaper-->
+	<br>
+	<br>
+	<!--*/start tokenomics-->
+	<div id="tokenomics">
+		<div class="row-superior">
+			<div class="row-left" style="float:left;">
+			<h1>Tokenomics</h1>
+			<p class="line">---</p>
+			<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			<br>
+			<p class="contenuto1"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			<br>
+			<button>Tokenomics</button>
+			</div>
+			<div class="row-right" style="float:left;">
+				<img src="https://docs.solanium.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MXTV5b4UKirD4lES_W4%2F-MZDd4WenYTTzsB4iHnQ%2F-MZDdYSF8YfQYzmFun6Z%2FPie%20chart.png?alt=media&token=fbae0a26-c3c8-4cdf-ad26-4118199e9888" style="width:385.59px; height:400px;">
+			</div>
+		</div>
+	</div>
+	<!--*/end tokenomics-->
+	<br>
+	<br>
+	<!--*/start audit-->
+	<div id="audit">
+		<div class="row-superior">
+			<div class="row-left-alt" style="float:left;">
+			<img src="2087856_40b0e3fde80ddd71450740d687c4a064-removebg-preview.png" style="width:250px; height: 290px; margin-bottom: 100px;" />
+			<p class="contenuto">A smart contract audit is an extensive methodical examination and analysis of a smart contract's code that is used to interact with a cryptocurrency or blockchain. </p>
+			</div>
+			<div class="row-right-alt" style="float:left;">
+				<h1>Audit</h1>
+				<p class="line">---</p>
+				<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+			    <br>
+				<p class="contenuto1"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
+				<br>
+				<button>Audit</button>
+			</div>
+		</div>
+	</div>
+	<!--*/end audit-->
+	<br>
+	<br>
+	<!--*/start team-->
+	<div id="team">
+	<br>
+	<br>
+	<h1>The Team</h1>
+	<p class="line-out">---</p>
+		<div class="row-superior">
+			<div class="team" style="float:left;">
+			<h1>Tizio</h1>
+			<div class="imgteam">
+			<img src="https://www.pngplay.com/wp-content/uploads/9/Elon-Musk-PNG-Clipart-Background.png" style="width:250px; heigth:290px;">
+			</div>
+			<br>
+			<div class="contenuto1">
+			CEO
+			</div>
+			</div>
+			<div class="team" style="float:left;">
+			<h1>Tizio</h1>
+			<div class="imgteam">
+			<img src="https://www.pngplay.com/wp-content/uploads/9/Elon-Musk-PNG-Clipart-Background.png" style="width: 100%; height: 150px;">
+			</div>
+			<br>												 
+			<div class="contenuto1">
+			MARKETING CHEF
+			</div>
+			</div>
+			<div class="team" style="float:left;">
+			<h1>Tizio</h1>
+			<div class="imgteam">
+			<img src="https://www.pngplay.com/wp-content/uploads/9/Elon-Musk-PNG-Clipart-Background.png" style="width: 100%; height: 150px;">
+			</div>
+			<br>
+			<div class="contenuto1">
+			HUMAN RESOURCES
+			</div>
+			</div>
+			<div class="team" style="float:left;">
+			<h1>Tizio</h1>
+			<div class="imgteam">
+			<img src="https://www.pngplay.com/wp-content/uploads/9/Elon-Musk-PNG-Clipart-Background.png" style="width: 100%; height: 150px;">
+			</div>
+			<br>												   
+			<div class="contenuto1">
+			CTO
+			</div>
+			</div>
+			<div class="team" style="float:left;">
+			<h1>Tizio</h1>
+			<div class="imgteam">
+			<img src="https://www.pngplay.com/wp-content/uploads/9/Elon-Musk-PNG-Clipart-Background.png" style="width: 100%; height: 150px;">
+			</div>
+			<br>	
+			<div class="contenuto1">
+			SUPPORT
+			</div>
+			</div>
+		</div>
+	</div>
+	<!--*/end team-->
+	<!--*/start roadmap-->
+	<div id="roadmap">
+	<br>
+	<br>
+	<h1>RoadMap</h1>
+	<p class="line-out">---</p>
+	<div class="timeline">
+  <div class="container left">
+    <div class="date">15 Dec</div>
+    <i class="icon fa fa-home"></i>
+    <div class="content">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+      </p>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
-
-  <div class="intro-banner">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <img src="assets/images/logo-v1.png" alt="">
-          <h1>DigiMedia HTML5 Template</h1>
-          <h4>Please choose one of the three variations below.</h4>
-          <div class="first-button scroll-to-section">
-            <a href="#demos">Choose Demo</a>
-          </div>
-        </div>
-      </div>
+  <div class="container right">
+    <div class="date">22 Oct</div>
+    <i class="icon fa fa-gift"></i>
+    <div class="content">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+      </p>
     </div>
   </div>
-
-
-  <div class="demos" id="demos">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="demo-item">
-            <a href="homepage_1.html"><img src="assets/images/demo-1.jpg" alt="DigiMedia - variation 1"></a>
-            <h4>Version 1</h4>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="demo-item">
-            <a href="homepage_2.html"><img src="assets/images/demo-2.jpg" alt="DigiMedia - variation 2"></a>
-            <h4>Version 2</h4>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="demo-item">
-            <a href="homepage_3.html"><img src="assets/images/demo-3.jpg" alt="DigiMedia - variation 3"></a>
-            <h4>Version 3</h4>
-          </div>
-        </div>
-      </div>
+  <div class="container left">
+    <div class="date">10 Jul</div>
+    <i class="icon fa fa-user"></i>
+    <div class="content">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+      </p>
     </div>
   </div>
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2022 DigiMedia Co., Ltd. All Rights Reserved. 
-          <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
-        </div>
-      </div>
+  <div class="container right">
+    <div class="date">18 May</div>
+    <i class="icon fa fa-running"></i>
+    <div class="content">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+      </p>
     </div>
-  </footer>
-
-
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-</body>
-
+  </div>
+  <div class="container left">
+    <div class="date">10 Feb</div>
+    <i class="icon fa fa-cog"></i>
+    <div class="content">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+      </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="date">01 Jan</div>
+    <i class="icon fa fa-certificate"></i>
+    <div class="content">
+      <h2>Lorem ipsum dolor sit amet</h2>
+      <p>
+        Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+      </p>
+    </div>
+  </div>
+</div>
+	</div>
+	<!--*/end roadmap-->
+	<br>
+	<!--*/startfooter-->
+	<div id="footer">
+	<h3>Tkrev-TokenRevolution s.r.l.s-Allright@ Reserved</h3>
+	</div>
+	<!--*/end footer-->
+	<!--social-->
+	<div id="social">
+		<div class="row-superior.socials">
+			<div class="row-left-socials" style="float:left;">
+			<h1>Nanotecnatoken@nanotecna.com</h1>
+			</div>
+			<div class="row-right-socials" style="float:left;">
+			<div class="contentrow">
+			<ul id="socials">
+				<li><a href=""><img class="icon" src="https://it.seaicons.com/wp-content/uploads/2015/06/Facebook-icon4.png"/></a></li>
+				<li><a href=""><img class="icon" src="https://cdn.icon-icons.com/icons2/1584/PNG/128/3721672-instagram_108066.png"/></a></li>
+				<li><a href=""><img class="icon" src="https://it.seaicons.com/wp-content/uploads/2015/06/twitter-icon.png"/></a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+	</body>
 </html>
+<script>
+	// non devi toccare più nulla, solo aggiungere fade-in-animation e fade-in
+	//li dove vuoi attivare le animazioni
+	// per modificare le animazioni vai ad inizio pagina e modifica @keyframes
+		const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+	if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('fade-in-animation');
+    }
 
+  });
+});
+
+var boxElList  = document.querySelectorAll('.fade-in');
+boxElList.forEach((el) => {
+	observer.observe(el);
+})
+</script>
