@@ -10,50 +10,44 @@
 		<style>
 			
 			
-			.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  background-color: #555;
-  height: 500px;
+			.dropbtn {
+  background-color: #3498DB;
   color: white;
-  border-radius: 10px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
   position: relative;
+  display: inline-block;
 }
 
-.topnav #myLinks {
+.dropdown-content {
   display: none;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.topnav a.icon {
-  background: black;
-  display: block;
   position: absolute;
-  right: 0;
-  top: 0;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
+.dropdown-content a {
   color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 			
 			
 			@keyframes wipe-enter {
@@ -536,41 +530,40 @@
 		</div>
 	<!--*/end header-->
 		
-<!-- Simulate a smartphone / tablet -->
-<div class="mobile-container">
+<h2>Clickable Dropdown</h2>
+<p>Click on the button to open the dropdown menu.</p>
 
-<!-- Top Navigation Menu -->
-<div class="topnav">
-  <a href="#home" class="active">Logo</a>
-  <div id="myLinks">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-<div style="padding-left:16px">
-  <h3>Vertical Mobile Navbar</h3>
-  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
-  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
-</div>
-
-<!-- End smartphone / tablet look -->
 </div>
 
 <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
 function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }
 </script>
+
 
 	<!--*/start countdown-->
 	<div  id="countdown">
