@@ -473,6 +473,22 @@
 			
 					<div id="menu0">
 						<button>Menu</button>
+						  <div id="myLinks">
+						    <a href="#news">News</a>
+						    <a href="#contact">Contact</a>
+						    <a href="#about">About</a>
+						  </div>
+						<script>
+							function myFunction() {
+							  var x = document.getElementById("myLinks");
+							  if (x.style.display === "block") {
+							    x.style.display = "none";
+							  } else {
+							    x.style.display = "block";
+							  }
+							}
+						</script>
+
 						<!--/* <ul id="menu">
 							<li><a href="#Home">Home</a></li>
 							<li><a href="#Whitepaper">WhitePaper</a></li>
