@@ -58,13 +58,16 @@
     </div>
   
       <script>
-const ethereumButton = document.querySelector('.enableEthereumButton');
-const sendEthButton = document.querySelector('.sendEthButton');
-const showAccount = document.querySelector('.showAccount');
 const Buy = document.getElementById('Buy');
 const BuyL = document.getElementById('BuyL');
 const Sell = document.getElementById('Sell');
 const SellL = document.getElementById('SellL');
+Buy.addEventListener("change", function() {BuyL.innerHTML= Buy.value*1});
+Sell.addEventListener("change", function() {SellL.innerHTML= Sell.value*1});
+        
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const sendEthButton = document.querySelector('.sendEthButton');
+const showAccount = document.querySelector('.showAccount');
 
 let accounts = [];
 
