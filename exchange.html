@@ -31,7 +31,6 @@
   <body>
     
   <button class="enableEthereumButton btn">Enable Ethereum</button>
-  <button class="sendEthButton btn">Send Eth</button>
   <button class="showAccount">Show account</button>
  
     
@@ -97,17 +96,19 @@ await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddre
             </div>
             <div id="Legnanotokensection">
               <lable> You will have: XXXX LeganoCoin </lable>
-              <button> BUY </button>
+              <br>
+               <button class="sendEthButton btn">BUY</button>
             </div>
     </div>
     <div id="rowsell">
             <div id="Legnanotokensection">
               <lable>Amount of LegnanoCoin</lable>
-              <input id="buy"></input>
+              <input id="sell"></input>
             </div>
             <div id="BUSDsection">
                <lable> You will have: XXXX BUSD </lable>
-               <button> Sell </button>
+               <br>
+               <button class="sendEthButton btn">SELL</button>
             </div>
     </div>
   </body>
