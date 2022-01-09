@@ -32,7 +32,7 @@
     
   <button class="enableEthereumButton btn">Enable Ethereum</button>
   <button class="showAccount">Show account</button>
- 
+  <button class="sendEthButton btn">BUY</button>
     
     <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
@@ -97,7 +97,7 @@ await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddre
             <div id="Legnanotokensection">
               <lable> You will have: XXXX LeganoCoin </lable>
               <br>
-               <button class="sendEthButton btn">BUY</button>
+               <button>BUY</button>
             </div>
     </div>
     <div id="rowsell">
@@ -108,7 +108,7 @@ await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddre
             <div id="BUSDsection">
                <lable> You will have: XXXX BUSD </lable>
                <br>
-               <button class="sendEthButton btn">SELL</button>
+               <button>SELL</button>
             </div>
     </div>
   </body>
