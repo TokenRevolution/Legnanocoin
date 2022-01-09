@@ -139,25 +139,6 @@ async function getAccount() {
   accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
-       try {
-     handleNewAccounts(account);
-    } catch (err) {
-      console.error('Error on init when getting accounts', err);
-    }
-}
-async function handleNewAccounts(newAccounts)
-      {    
-var SMART_CHAIN = "https://api.bscscan.com/api";
-var ADDRESS_FOR_GET_BALANCE = "0xe9e7cea3dedca5984780bafc599bd69add087d56";
-var CONNECTED_ADDRESS = newAccounts;
-var APIKEY = "XHQ5VW16JQQBUESG69IBVACI83KEDAAMC2";
-var DECIMALS_OF_CHOSED_TOKEN = 1e-18;
-await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddress='+ADDRESS_FOR_GET_BALANCE+'&address='+CONNECTED_ADDRESS+'&tag=latest&apikey='+APIKEY, function (data) {
-    let BALANCE = data['result'] * DECIMALS_OF_CHOSED_TOKEN;
-
-  document.getElementById('Ntoken').innerHTML = BALANCE;
-  });
-      } 
     </script>
   </body>
 </html>
