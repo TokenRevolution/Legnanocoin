@@ -32,9 +32,32 @@
     
   <button class="enableEthereumButton btn">Enable Ethereum</button>
   <button class="showAccount">Show account</button>
-  <button class="sendEthButton btn">BUY</button>
+  <button class="sendEthButton btn">BUY</button> 
     
-    <script>
+    <div id="rowbuy">
+            <div id="BUSDsection">
+              <lable>Amount of BUSD:</lable>
+              <input id="buy"></input>
+            </div>
+            <div id="Legnanotokensection">
+              <lable> You will have: <label type="number" id="BuyL">XXXX</label> LeganoCoin </lable>
+              <br>
+               <button>BUY</button>
+            </div>
+    </div>
+    <div id="rowsell">
+            <div id="Legnanotokensection">
+              <lable>Amount of LegnanoCoin</lable>
+              <input id="sell"></input>
+            </div>
+            <div id="BUSDsection">
+               <lable> You will have: <lable> You will have: <label type="number" id="SellL">XXXX</lable> BUSD </lable>
+               <br>
+               <button>SELL</button>
+            </div>
+    </div>
+  
+      <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
 const showAccount = document.querySelector('.showAccount');
@@ -88,28 +111,5 @@ await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddre
   });
       } 
     </script>
-    
-    <div id="rowbuy">
-            <div id="BUSDsection">
-              <lable>Amount of BUSD:</lable>
-              <input id="buy"></input>
-            </div>
-            <div id="Legnanotokensection">
-              <lable> You will have: XXXX LeganoCoin </lable>
-              <br>
-               <button>BUY</button>
-            </div>
-    </div>
-    <div id="rowsell">
-            <div id="Legnanotokensection">
-              <lable>Amount of LegnanoCoin</lable>
-              <input id="sell"></input>
-            </div>
-            <div id="BUSDsection">
-               <lable> You will have: XXXX BUSD </lable>
-               <br>
-               <button>SELL</button>
-            </div>
-    </div>
   </body>
 </html>
