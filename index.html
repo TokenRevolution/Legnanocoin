@@ -4,9 +4,34 @@
 	<script src="lib/intersection-observer/intersection-observer.js"></script>
 		<style>
 			@media only screen and (max-width: 1000px) {
-				h1 {
-				color: yellow !important;
-				}
+		.row-left{
+				    width: 60%;
+				    height: 500px;
+				    background-color: rgb(223 0 22 / 70%);
+				    text-align: center;
+		}
+		.row-right{
+					height: 450px;
+				    width: 40%;
+				    text-align: center;
+					margin-top: 25px;
+					background-color: rgb(255 255 255 / 70%);
+			      
+		}
+		.row-left-alt{
+				    height: 435px;
+				    width: 40%;
+				    background-color: rgb(255 255 255 / 70%);
+				    text-align: center;
+				    margin-top: 25px;		
+				    padding-top: 30px;
+			}
+		.row-right-alt{
+				    width: 60%;
+				    height: 500px;
+				    background-color: rgb(223 0 22 / 70%);
+				    text-align: center;
+		}
 			}
 			div#mylinks{
 			    text-align: center;
@@ -159,6 +184,7 @@
 				    height: 500px;
 				    background-color: rgb(223 0 22 / 70%);
 				    text-align: center;
+				    float:left;
 		}
 		.row-right{
 					height: 450px;
@@ -166,6 +192,8 @@
 				    text-align: center;
 					margin-top: 25px;
 					background-color: rgb(255 255 255 / 70%);
+				    float:left;
+			      
 		}
 		.row-left-alt{
 				    height: 435px;
@@ -174,12 +202,14 @@
 				    text-align: center;
 				    margin-top: 25px;		
 				    padding-top: 30px;
+				    float:left;
 			}
 		.row-right-alt{
 				    width: 60%;
 				    height: 500px;
 				    background-color: rgb(223 0 22 / 70%);
 				    text-align: center;
+			            float:left;
 		}
 		.row-left-menu{
 		}
@@ -694,7 +724,7 @@ initializeClock('clockdiv', deadline);
 	<!--*/start home-->
 	<div id="home">
 		<div class="row-superior  fade-in-animation">
-			<div class="row-left fade-in" style="float:left;">
+			<div class="row-left fade-in">
 			<h1>The project</h1>
 			<p class="line">---</p>
 			<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
@@ -703,7 +733,7 @@ initializeClock('clockdiv', deadline);
 			<br>
 			<button><b> Telegram </b></button>
 			</div>
-			<div class="row-right " style="float:left;">
+			<div class="row-right ">
 			<img src="https://sc04.alicdn.com/kf/HTB1jQ9KRXXXXXc3XXXX760XFXXXk.png" style="width: 396px; height:auto; margin-top: 48px;">
 				<div class="contentrow">
 				</div>
@@ -716,11 +746,11 @@ initializeClock('clockdiv', deadline);
 	<!--*/start whitepaper-->
 	<div id="whitepaper">
 		<div class="row-superior fade-in-animation">
-			<div class="row-left-alt" style="float:left;">
+			<div class="row-left-alt">
 			<img src="unnamed-removebg-preview.png" style="width:250px; heigth:290px; margin-bottom: 150px;"/>
 			<p class="contenutoalt"> A document released by a crypto project that gives investors technical information about its concept</p>
 			</div>
-			<div class="row-right-alt fade-in" style="float:left;">
+			<div class="row-right-alt fade-in">
 			<h1>Whitepaper</h1>
 			<p class="line">---</p>
 			<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
@@ -737,7 +767,7 @@ initializeClock('clockdiv', deadline);
 	<!--*/start tokenomics-->
 	<div id="tokenomics">
 		<div class="row-superior">
-			<div class="row-left" style="float:left;">
+			<div class="row-left">
 			<h1>Tokenomics</h1>
 			<p class="line">---</p>
 			<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
@@ -746,7 +776,7 @@ initializeClock('clockdiv', deadline);
 			<br>
 			<button>Tokenomics</button>
 			</div>
-			<div class="row-right" style="float:left;">
+			<div class="row-right">
 				<img src="https://docs.solanium.io/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MXTV5b4UKirD4lES_W4%2F-MZDd4WenYTTzsB4iHnQ%2F-MZDdYSF8YfQYzmFun6Z%2FPie%20chart.png?alt=media&token=fbae0a26-c3c8-4cdf-ad26-4118199e9888" style="width:385.59px; height:400px;">
 			</div>
 		</div>
@@ -757,11 +787,11 @@ initializeClock('clockdiv', deadline);
 	<!--*/start audit-->
 	<div id="audit">
 		<div class="row-superior">
-			<div class="row-left-alt" style="float:left;">
+			<div class="row-left-alt">
 			<img src="2087856_40b0e3fde80ddd71450740d687c4a064-removebg-preview.png" style="width:250px; height: 290px; margin-bottom: 100px;" />
 			<p class="contenutoalt">A smart contract audit is an extensive methodical examination and analysis of a smart contract's code that is used to interact with a cryptocurrency or blockchain. </p>
 			</div>
-			<div class="row-right-alt" style="float:left;">
+			<div class="row-right-alt">
 				<h1>Audit</h1>
 				<p class="line">---</p>
 				<p class="contenuto"> Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
