@@ -2,6 +2,27 @@
 	<title>LegnanoCoin</title>
 	<script src="lib/intersection-observer/intersection-observer.js"></script>
 		<style>
+			<script>
+			          function FadeInanimation(props) {
+				  const [isVisible, setVisible] = React.useState(true);
+				  const domRef = React.useRef();
+				  React.useEffect(() => {
+				    const observer = new IntersectionObserver(entries => {
+				      entries.forEach(entry => setVisible(entry.isIntersecting));
+				    });
+				    observer.observe(domRef.current);
+				    return () => observer.unobserve(domRef.current);
+				  }, []);
+				  return (
+				    <div
+				      className={`fade-in-animation ${isVisible ? 'is-visible' : ''}`}
+				      ref={domRef}
+				    >
+				      {props.children}
+				    </div>
+				  );
+				}
+			</script>
 			@keyframes fadein{
 			    0% { opacity:0; }
 			    66% { opacity:0; }
