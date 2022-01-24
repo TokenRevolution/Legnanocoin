@@ -2,53 +2,47 @@
 	<title>LegnanoCoin</title>
 	<script src="lib/intersection-observer/intersection-observer.js"></script>
 		<style>
-			.fade-in-section {
-					  opacity: 1;
-					  transform: translateY(20vh);
-					  visibility: hidden;
-					  transition: opacity 1200ms ease-out, transform 600ms ease-out,
-					    visibility 1200ms ease-out;
-					  will-change: opacity, transform, visibility;
-					}
-			.fade-in-section.is-visible {
-					  opacity: 1;
-					  transform: none;
-					  visibility: visible;
-					}
-			<script>
-			import React from 'react';
-			import ReactDOM from 'react-dom';
-			
-			         function FadeInSection(props) {
-					  const [isVisible, setVisible] = React.useState(false);
-					  const domRef = React.useRef();
-					  React.useEffect(() => {
-					    const observer = new IntersectionObserver(entries => {
-					      entries.forEach(entry => setVisible(entry.isIntersecting));
-					    });
-					    observer.observe(domRef.current);
-					  }, []);
-					  return (
-					    <div
-					      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-					      ref={domRef}
-					    >
-					      {props.children}
-					    </div>
-					  );
-				}
-			</script>
-			@keyframes fadein{
-			    0% { opacity:0; }
-			    66% { opacity:0; }
-			    100% { opacity:1; }
-			}
 
-			@-webkit-keyframes fadein{
-			    0% { opacity:0; }
-			    66% { opacity:0; }
-			    100% { opacity:1; }
-			}
+			@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+	    .fade-in {
+  width: auto;
+  height: auto;
+ 
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-animation {
+    animation: wipe-enter 1s 1;
+  }
+}
+			<script>
+
+	// non devi toccare più nulla, solo aggiungere fade-in-animation e fade-in
+	//li dove vuoi attivare le animazioni
+	// per modificare le animazioni vai ad inizio pagina e modifica @keyframes
+		const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+	if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('fade-in-animation');
+    }
+
+  });
+});
+
+var boxElList  = document.querySelectorAll('.fade-in');
+boxElList.forEach((el) => {
+	observer.observe(el);
+})
+
+			</script>
 			@media only screen and (max-width: 1000px) {
 		button {
 			    width: 400px;
@@ -751,7 +745,7 @@ function myFunction() {
 
 			
 	<!--*/start countdown-->
-	<div id="countdown" class="fade-in-section">
+	<div id="countdown" class="fade-in-animation">
 		<div class="row-superior fade-in-animation">
 				<div class="clock-right fade-in fade-in-animation" style="
 ">
@@ -763,7 +757,7 @@ function myFunction() {
 				<br>	
 					<div id="clockdiv" style="
     animation: 4s ease 0s normal forwards 1 fadein;
-">
+" class="fade-in-animation">
 					  <div class="fade-in-animation">
 						<span class="days">14</span>
 						<div class="smalltext">Days</div>
@@ -833,7 +827,7 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<br>
 	<!--*/start home-->
-	<div id="home" class="fade-in-section"">
+	<div id="home" class="fade-in-animation"">
 		<div class="row-superior  fade-in-animation">
 			<div class="row-left fade-in fade-in-animation">
 			<h1>The project</h1>
@@ -891,7 +885,7 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<br>
 	<!--*/start tokenomics-->
-	<div id="tokenomics" class="fade-in-section">
+	<div id="tokenomics" class="fade-in-animation">
 		<div class="row-superior fade-in-animation">
 			<div class="row-left fade-in-animation">
 			<h1>Tokenomics</h1>
@@ -919,7 +913,7 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<br>
 	<!--*/start audit-->
-	<div id="audit" class="fade-in-section">
+	<div id="audit" class="fade-in-animation">
 		<div class="row-superior fade-in-animation">
 			<div class="row-left-alt fade-in-animation" style="
     animation: 2s ease 0s normal forwards 1 fadein;
@@ -950,7 +944,7 @@ initializeClock('clockdiv', deadline);
 	<!--*/start team-->
 	<div id="team" style="
     animation: 5s ease 0s normal forwards 1 fadein;
-" class="fade-in-section">
+" class="fade-in-animation">
 	<br>
 	<br>
 	<h1>The Team</h1>
@@ -1012,7 +1006,7 @@ initializeClock('clockdiv', deadline);
 	<!--*/start roadmap-->
 	<div id="roadmap" style="
     animation: 10s ease 0s normal forwards 1 fadein;
-" class="class="fade-in-section"">
+" class="class="fade-in-animation">
 	<br>
 	<br>
 	<h1>RoadMap</h1>
