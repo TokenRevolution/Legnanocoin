@@ -21,28 +21,7 @@
     animation: wipe-enter 1s 1;
   }
 }
-			<script>
-
-	// non devi toccare più nulla, solo aggiungere fade-in-animation e fade-in
-	//li dove vuoi attivare le animazioni
-	// per modificare le animazioni vai ad inizio pagina e modifica @keyframes
-		const observer = new IntersectionObserver(entries => {
-  // Loop over the entries
-  entries.forEach(entry => {
-    // If the element is visible
-	if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('fade-in-animation');
-    }
-
-  });
-});
-
-var boxElList  = document.querySelectorAll('.fade-in');
-boxElList.forEach((el) => {
-	observer.observe(el);
-})
-
-			</script>
+			
 			@media only screen and (max-width: 1000px) {
 		button {
 			    width: 400px;
@@ -1101,6 +1080,27 @@ initializeClock('clockdiv', deadline);
 	</div>
 
 
+<script>
 
+	// non devi toccare più nulla, solo aggiungere fade-in-animation e fade-in
+	//li dove vuoi attivare le animazioni
+	// per modificare le animazioni vai ad inizio pagina e modifica @keyframes
+		const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+	if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('fade-in-animation');
+    }
+
+  });
+});
+
+var boxElList  = document.querySelectorAll('.fade-in');
+boxElList.forEach((el) => {
+	observer.observe(el);
+})
+
+			</script>
 
 </body></html>
