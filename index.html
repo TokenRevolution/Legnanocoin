@@ -2,25 +2,37 @@
 	<title>LegnanoCoin</title>
 	<script src="lib/intersection-observer/intersection-observer.js"></script>
 		<style>
+			.fade-in-section {
+					  opacity: 0;
+					  transform: translateY(20vh);
+					  visibility: hidden;
+					  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+					    visibility 1200ms ease-out;
+					  will-change: opacity, transform, visibility;
+					}
+			.fade-in-section.is-visible {
+					  opacity: 1;
+					  transform: none;
+					  visibility: visible;
+					}
 			<script>
-			          function FadeInanimation(props) {
-				  const [isVisible, setVisible] = React.useState(true);
-				  const domRef = React.useRef();
-				  React.useEffect(() => {
-				    const observer = new IntersectionObserver(entries => {
-				      entries.forEach(entry => setVisible(entry.isIntersecting));
-				    });
-				    observer.observe(domRef.current);
-				    return () => observer.unobserve(domRef.current);
-				  }, []);
-				  return (
-				    <div
-				      className={`fade-in-animation ${isVisible ? 'is-visible' : ''}`}
-				      ref={domRef}
-				    >
-				      {props.children}
-				    </div>
-				  );
+			         function FadeInSection(props) {
+					  const [isVisible, setVisible] = React.useState(false);
+					  const domRef = React.useRef();
+					  React.useEffect(() => {
+					    const observer = new IntersectionObserver(entries => {
+					      entries.forEach(entry => setVisible(entry.isIntersecting));
+					    });
+					    observer.observe(domRef.current);
+					  }, []);
+					  return (
+					    <div
+					      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+					      ref={domRef}
+					    >
+					      {props.children}
+					    </div>
+					  );
 				}
 			</script>
 			@keyframes fadein{
@@ -736,7 +748,7 @@ function myFunction() {
 
 			
 	<!--*/start countdown-->
-	<div id="countdown">
+	<div id="countdown" class="fade-in-section">
 		<div class="row-superior fade-in-animation">
 				<div class="clock-right fade-in fade-in-animation" style="
 ">
@@ -818,8 +830,7 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<br>
 	<!--*/start home-->
-	<div id="home" style="
-">
+	<div id="home" class="fade-in-section"">
 		<div class="row-superior  fade-in-animation">
 			<div class="row-left fade-in fade-in-animation">
 			<h1>The project</h1>
@@ -877,8 +888,7 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<br>
 	<!--*/start tokenomics-->
-	<div id="tokenomics" style="
-">
+	<div id="tokenomics" class="fade-in-section">
 		<div class="row-superior fade-in-animation">
 			<div class="row-left fade-in-animation">
 			<h1>Tokenomics</h1>
@@ -906,8 +916,7 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<br>
 	<!--*/start audit-->
-	<div id="audit" style="
-">
+	<div id="audit" class="fade-in-section">
 		<div class="row-superior fade-in-animation">
 			<div class="row-left-alt fade-in-animation" style="
     animation: 2s ease 0s normal forwards 1 fadein;
@@ -937,8 +946,8 @@ initializeClock('clockdiv', deadline);
 	<br>
 	<!--*/start team-->
 	<div id="team" style="
-    animation: 10s ease 0s normal forwards 1 fadein;
-">
+    animation: 5s ease 0s normal forwards 1 fadein;
+" class="fade-in-section">
 	<br>
 	<br>
 	<h1>The Team</h1>
@@ -1000,7 +1009,7 @@ initializeClock('clockdiv', deadline);
 	<!--*/start roadmap-->
 	<div id="roadmap" style="
     animation: 10s ease 0s normal forwards 1 fadein;
-">
+" class="class="fade-in-section"">
 	<br>
 	<br>
 	<h1>RoadMap</h1>
