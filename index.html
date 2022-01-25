@@ -2,6 +2,19 @@
 	<title>LegnanoCoin</title>
 	<script src="lib/intersection-observer/intersection-observer.js"></script>
 		<style>
+			
+			
+			@keyframes slidein {
+				  from {
+				    margin-left: 100%;
+				    width: 300%;
+				  }
+
+				  to {
+				    margin-left: 0%;
+				    width: 100%;
+				  }
+				}
 
 			@keyframes wipe-enter {
 	0% {
@@ -114,6 +127,8 @@
 		color: white;
 		margin-left: 20px;
 		margin-right: 20px;
+		animation-duration: 3s;
+                animation-name: slidein;
 		}
 		div#countdown{
 		width: 100%;
