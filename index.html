@@ -3,18 +3,6 @@
 	<script src="lib/intersection-observer/intersection-observer.js"></script>
 		<style>
 			
-			
-			@keyframes slidein {
-				  from {
-				    margin-left: 100%;
-				    width: 300%;
-				  }
-
-				  to {
-				    margin-left: 0%;
-				    width: 100%;
-				  }
-				}
 
 			@keyframes wipe-enter {
 	0% {
@@ -32,6 +20,11 @@
 @media (prefers-reduced-motion: no-preference) {
   .fade-in-animation {
     animation: wipe-enter 1s 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-animationtext {
+    animation: wipe-enter 3s 1;
   }
 }
 			@media only screen and (min-width: 1001px) {
@@ -127,8 +120,6 @@
 		color: white;
 		margin-left: 20px;
 		margin-right: 20px;
-		animation-duration: 3s;
-                animation-name: slidein;
 		}
 		div#countdown{
 		width: 100%;
@@ -740,7 +731,7 @@ function myFunction() {
 						<p class="contenuto1 fade-in" style="animation: 4s ease;"> 
 							Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper,  Estratto White Paper.</p> 
 				<br>	
-					<div id="clockdiv" class="clock fade-in">
+					<div id="clockdiv" class="clock fade-in-animationtext">
 					  <div>
 						<span class="days">14</span>
 						<div class="smalltext">Days</div>
