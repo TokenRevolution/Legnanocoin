@@ -33,6 +33,27 @@
   }
 }
 			@media only screen and (min-width: 1001px) {
+				div#progresso{
+				    text-align: center;
+				    margin-top: 10%;
+				    margin-bottom: 5%;
+				    background: rgb(223 0 22 / 70%);
+				    border-radius: 20px;
+				    padding: 5%;
+				    height: auto;
+				}
+				div#interno-destra{
+					    width: 50%;
+					    FLOAT: LEFT;
+					}
+				div#interno-sinistra{
+				background: white;
+			    WIDTH: 50%;
+			    margin-left: 50%;
+			    height: 50%;
+			    border-radius: 20px;
+				}
+				
 				.topnav{
 				display: none;
 				}
@@ -847,16 +868,8 @@ initializeClock('clockdiv', deadline);
 	</div>
 	<!--*/end countdown-->
 	<!--*/progress bar-->
-		<div id="progresso" class="fade-in-animation" style="
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    background: rgb(223 0 22 / 70%);
-    border-radius: 20px;
-    padding: 5%;
-    height: auto;
-">
-<div id="interno-destra" style="width: 50%; float: left;">
+		<div id="progresso" class="fade-in-animation">
+			<div id="interno-destra">
 						<label id="progress" for="file" style="
 			    color: white;
 			    font-variant: petite-caps;
@@ -877,13 +890,7 @@ initializeClock('clockdiv', deadline);
 						<br>
 						<Button>Join to Pre-sales</Button>
 </div>
-<div id="interno-sinistra" style="
-    background: white;
-    WIDTH: 50%;
-    margin-left: 50%;
-    height: 50%;
-    border-radius: 20px;
-">
+<div id="interno-sinistra">
 	<h1 style="
     color: #df0016;> How to Buy LegnanoCoin </h1>
 </div>
