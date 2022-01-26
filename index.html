@@ -700,7 +700,6 @@
 			font-size: 2 em;
 			}
 			label#progress {
-				    padding-right: 10px;
 				    font-size: 1rem;
 				}
 
@@ -848,9 +847,20 @@ initializeClock('clockdiv', deadline);
 	</div>
 	<!--*/end countdown-->
 	<!--*/progress bar-->
-		<div id="progresso" class="fade-in-animation">
-			<label id="progress" for="file">File progress:</label>
+		<div id="progresso" class="fade-in-animation" style="
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background: rgb(223 0 22 / 70%);
+    border-radius: 20px;
+">
+			<label id="progress" for="file">Raised fund</label>
+			<br>
 			<progress id="file" max="100" value="70"> 70% </progress>
+			<br>
+			<h1>Total Found: € 3.000.000</h1>
+			<br>
+			<h1>Raised fund: € 2.100.000</h1>
 		</div>
 	<!--*/end progresbar -->
 	<br>
