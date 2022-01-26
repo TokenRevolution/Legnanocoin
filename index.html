@@ -699,6 +699,10 @@
     			text-decoration: none;
 			font-size: 2 em;
 			}
+			label#progress {
+				    padding-right: 10px;
+				    font-size: 1rem;
+				}
 
 	</style>
 	</head>
@@ -845,7 +849,8 @@ initializeClock('clockdiv', deadline);
 	<!--*/end countdown-->
 	<!--*/progress bar-->
 		<div id="progresso" class="fade-in-animation">
-		
+			<label id="progress" for="file">File progress:</label>
+			<progress id="file" max="100" value="70"> 70% </progress>
 		</div>
 	<!--*/end progresbar -->
 	<br>
